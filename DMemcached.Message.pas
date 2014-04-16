@@ -280,7 +280,7 @@ begin
   // DataType
   Move(emptyValue, Result[dataTypaOffset], 1);
   // Reserved
-  reserved := Reserved;
+  reserved := self.Reserved;
   Move(reserved[0], Result[reservedOffset], 2);
   // BodyLength
   Move(UInt32ToByte(BodyLength)[0], Result[bodyLengthOffset], SizeOf(BodyLength));

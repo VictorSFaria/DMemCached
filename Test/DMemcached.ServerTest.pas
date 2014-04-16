@@ -56,7 +56,7 @@ type
 implementation
 
 uses
-  DMemcached.Trasncoder, SysUtils, Memcache, CLasses;
+  DMemcached.Trasncoder, SysUtils, CLasses;
 
 { TConnectionTest }
 

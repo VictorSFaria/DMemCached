@@ -34,7 +34,9 @@ uses
   DUnitX.Loggers.Null in '..\DUnitX\DUnitX.Loggers.Null.pas',
   DMemcached.Test.Transcoder in 'Test\DMemcached.Test.Transcoder.pas',
   DMemcached.Util in 'DMemcached.Util.pas',
-  DMemcached.ServerTest in 'Test\DMemcached.ServerTest.pas';
+  DMemcached.ServerTest in 'Test\DMemcached.ServerTest.pas',
+  DUnitX.Extensibility in '..\DUnitX\DUnitX.Extensibility.pas',
+  DUnitX.Extensibility.PluginManager in '..\DUnitX\DUnitX.Extensibility.PluginManager.pas';
 
 var
   runner : ITestRunner;
