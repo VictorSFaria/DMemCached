@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8B84A07B-FF5B-4284-99C1-3585918F5886}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DMemCached.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DMemCached">
+        <MSBuild Projects="DMemCached.dproj"/>
+    </Target>
+    <Target Name="DMemCached:Clean">
+        <MSBuild Projects="DMemCached.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DMemCached:Make">
+        <MSBuild Projects="DMemCached.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DMemCached"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DMemCached:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DMemCached:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
